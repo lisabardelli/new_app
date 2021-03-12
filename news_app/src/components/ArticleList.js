@@ -26,12 +26,12 @@ function ArticleList({articles, setArticles}) {
   return (
     <div>
       < Article />
-      <ul>
           {articles.map(item => (
-
-            <li>{item.webTitle} </li>
+            <div>
+             <a href={item.webUrl}>({item.webTitle})</a>
+   </div>
           ))}
-      </ul>
+
     </div>
   );
 }
