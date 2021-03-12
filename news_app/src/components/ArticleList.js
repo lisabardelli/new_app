@@ -29,9 +29,8 @@ function ArticleList({articles, setArticles}) {
           {articles.map(item => (
             <div>
              <a href={item.webUrl}>{item.webTitle}</a><br></br>
-
              <img src={item.fields.thumbnail} ></img>
-   </div>
+            </div>
           ))}
 
     </div>
