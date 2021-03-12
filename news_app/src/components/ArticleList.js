@@ -8,7 +8,7 @@ function ArticleList({articles, setArticles}) {
   
     useEffect(() => {
       const getArticles = () =>  {
-        fetch('https://content.guardianapis.com/search?api-key='
+        fetch('https://content.guardianapis.com/search?show-fields=all&api-key='
        )
        .then(response => response.json())
        .then(data => { 
@@ -28,7 +28,9 @@ function ArticleList({articles, setArticles}) {
       < Article />
           {articles.map(item => (
             <div>
-             <a href={item.webUrl}>({item.webTitle})</a>
+             <a href={item.webUrl}>{item.webTitle}</a><br></br>
+
+             <img src={item.fields.thumbnail} ></img>
    </div>
           ))}
 
