@@ -6,7 +6,7 @@ function ArticleList({articles, setArticles}) {
   
     useEffect(() => {
       const getArticles = () =>  {
-        fetch('https://content.guardianapis.com/search?show-fields=all&api-key=5e6b768f-f32d-4027-aa0a-382802b9b418'
+        fetch('https://content.guardianapis.com/search?show-fields=all&api-key='
        )
        .then(response => response.json())
        .then(data => { 
