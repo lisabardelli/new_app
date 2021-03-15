@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
 import Article from "./Article";
-// require('dotenv').config();
-// const Dotenv = require('dotenv-webpack');
-// const keyAPI = process.env.KEY
+
 function ArticleList({articles, setArticles}) {
   
     useEffect(() => {
       const getArticles = () =>  {
-        fetch('https://content.guardianapis.com/search?show-fields=all&api-key='
+        fetch('https://content.guardianapis.com/search?show-fields=all&api-key=5e6b768f-f32d-4027-aa0a-382802b9b418'
        )
        .then(response => response.json())
        .then(data => { 
@@ -25,10 +23,11 @@ function ArticleList({articles, setArticles}) {
 
   return (
     <div>
-      < Article />
           {articles.map(item => (
             <div>
+       
              <a href={item.webUrl}>{item.webTitle}</a><br></br>
+             <h3> {item.pillarName}</h3>
              <img src={item.fields.thumbnail} ></img>
             </div>
           ))}
