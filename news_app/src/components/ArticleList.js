@@ -22,13 +22,14 @@ function ArticleList({articles, setArticles}) {
     
 
   return (
-    <div>
+    <div className="container">
           {articles.map(item => (
-            <div>
-       
-             <a href={item.webUrl}>{item.webTitle}</a><br></br>
-             <h3> {item.pillarName}</h3>
-             <img src={item.fields.thumbnail} ></img>
+            <div className="one-article">
+           
+              <a className="title" href={item.webUrl}>{item.webTitle}</a><br></br>
+              {/* <h3 className="pillar-n"> {item.pillarName}</h3> */}
+        
+             <img className="image" src={item.fields.thumbnail} ></img>
             </div>
           ))}
 

@@ -14,6 +14,8 @@ function App() {
   var date = moment(new Date()).format("Do MMMM")
   return (
     <div>
+      <div>
+        <h1 className="name">The News</h1><h1 className="date"> {date}</h1>
       < PillarButton 
        pillars = {pillars}
        setPillars = {setPillars}
@@ -22,7 +24,9 @@ function App() {
        selectedArticles = {selectedArticles}
        setSelectedArticles = {setSelectedArticles}
        />
-         <h1> {date}</h1>
+       </div>
+     
+
          < ArticleList
          articles = {articles}
          setArticles = {setArticles}

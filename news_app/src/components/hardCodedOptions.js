@@ -1,4 +1,4 @@
-const hardcodedOptions = ["News", "Sport", "Arts", "Lifestyle"];
+const hardcodedOptions = ["News", "Sport", "Lifestyle", "Culture", "Opinion"];
   
   export default hardcodedOptions;
   

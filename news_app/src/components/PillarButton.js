@@ -35,17 +35,20 @@ function PillarButton ({pillars, setPillars, articles, setArticles,selectedArtic
 
   return (
         <div className="pillar-name">  
+           <div className="container-button">
         {pillars.map(pillarName => (
-              <button  value={pillarName} onClick={ () => handleClick(pillarName)}>{pillarName}</button>
+            
+              <button className="pillar-button" value={pillarName} onClick={ () => handleClick(pillarName)}>{pillarName}</button>
+      
           ))}
+        </div>
 
-
-{selectedArticles.map(item => (
+            {selectedArticles.map(item => (
             <div>
        
-             <a href={item.webUrl}>{item.webTitle}</a><br></br>
+             <a className="title" href={item.webUrl}>{item.webTitle}</a><br></br>
              <h3> {item.pillarName}</h3>
-             <img src={item.fields.thumbnail} ></img>
+             <img className="image" src={item.fields.thumbnail} ></img>
             </div>
           ))}
 
