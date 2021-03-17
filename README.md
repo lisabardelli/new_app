@@ -8,7 +8,7 @@ All news are from The Guardian.
 
 React
 
-## API Resources
+### API Resources
 
 * [Guardian newspaper API homepage](http://open-platform.theguardian.com/documentation/)
 
